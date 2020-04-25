@@ -28,6 +28,12 @@ class App extends Component {
           </div>
         </div>
       </Router>
+      <div id = "status">
+        <p>
+          <span id = "note" > NOTE </span>
+          Currently in the process of acquiring data and interested responses ...
+        </p>
+      </div>
       </>
     )
   }

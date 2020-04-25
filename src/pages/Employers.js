@@ -3,7 +3,7 @@ import Typist from 'react-typist'
 
 const Employers = () => (
 	<>
-	<div id = "textDragon">
+	<div class = "textDragon">
 		<Typist startDelay={500} >#HireADragon</Typist>
 	</div>
 	<h1>  </h1>

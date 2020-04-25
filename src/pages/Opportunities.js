@@ -5,22 +5,25 @@ import { Link } from 'react-router-dom'
 
 const Opportunities = () => (
 	<>
-	<div id = "textDragon">
+	<div class = "textDragon">
 		<Typist avgTypingSpeed={15000} startDelay={500}>
 			<a href="/" >#HireADragon</a>
 		</Typist>
 	</div>
 
 	<div id = "info-left">
-		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 1500}>
+		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
 			<h1 id = "header-left"> Drexel student looking for a co-op or internship? </h1>
 			<p>
 				The website aims to connect Drexel students who have recently lost their co-ops/internships
 				and are currently looking for productive projects as summer opportunities with the companies 
 				looking to hire the best in Philadelphia! 
 			</p>
+			<p>
+				Register to have your resume and info sent to companies hiring in the Greater Philadelphia Area and across the country!!
+			</p>
 			<button>
-				<Link to="/students">Register!</Link>
+				<Link to="/students">I'm in!</Link>
 			</button>
 			</Anime>
 		<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>

@@ -10,23 +10,27 @@ h1 {
 
 #header-left{
   color: maroon;
-  border: 5px dotted green;
 }
 
 #header-right{
   color: green;
-  border: 5px dotted pink;
 }
 
-#textDragon { 
+.textDragon { 
+  font-family: fantasy;
   position: absolute; 
   visibility: visible; 
-  left: 50px; 
-  top: 0;
+  top: 10px;
+  left: 10px;
   z-index: 200;
-  font-family: fantasy;
   font-size: 50px;
-  font-weight: bold; 
+  font-weight: bold;
+  width: 20%;
+  float: left;
+  padding-left: 20px;
+  border: 10px solid #00008B;
+  background-color:orange;
+  color: black;
 }
 
 h3, h4 {
@@ -46,6 +50,8 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 5px;
+  width: 30%;
+  float: right;
 }
 
 nav button {
@@ -113,6 +119,11 @@ a {
   font-weight: 400;
 }
 
+#info-left p {
+  background-color:rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
 #info-right {
   display: inline-block;
   float: right;
@@ -122,6 +133,11 @@ a {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
+}
+
+#info-right p {
+  background-color:rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 #info-left button {
@@ -187,4 +203,23 @@ a {
 
 #info-right a:hover {
   color: white;
+}
+
+#status {
+  text-align: center;
+  position: fixed;
+  font-size: 18px;
+  top: 46px;
+  width: 100%;
+  background-color: green;
+  overflow: hidden; 
+}
+
+#note {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 13px;
 }
