@@ -34,8 +34,8 @@ class App extends Component {
           <div id = "page-body" >
             <Switch>
               <Route path = "/" component = {Home} exact />
-              <Route path = "/students" component = {Students} />
-              <Route path = "/employers" component = {Employers} />
+              <Route path = "/students" component = {Students} exact/>
+              <Route path = "/employers" component = {Employers} exact/>
               <Route component = {Notfoundpage} />
             </Switch>
           </div>

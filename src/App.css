@@ -413,3 +413,10 @@ img {
   margin-left: auto;
   margin-right: auto;
 } 
+
+#notfound {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+}
