@@ -19,7 +19,7 @@ h1 {
 }
 
 #student-form-header{
-  margin-top: 200px;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10px;
@@ -294,6 +294,10 @@ img {
   padding: 12px;
 }
 
+#student-form-side {
+  padding-top: 60px;
+}
+
 #student-fields {
   width: 60%;
   margin-left: auto;
@@ -308,9 +312,9 @@ img {
 #student {
   display: inline-block;
   float: left;
-  margin: 80px 0px 20px 120px;
+  margin: 50px 0px 20px 10px;
   padding-bottom: 10px;
-  width: 40%;
+  width: 60%;
   font-family: Nunito Sans, sans-serif;
   font-weight: 400;
 }
@@ -334,8 +338,8 @@ img {
 #resources {
   display: inline-block;
   float: right;
-  margin: 80px 50px 10px 10px;
-  width: 40%;
+  margin: 0px 50px 10px 60px;
+  width: 30%;
   text-align: left;
   font-family: Nunito Sans, sans-serif;
   font-weight: 400;
@@ -375,12 +379,13 @@ img {
 }
 
 #studentform-submit {
-  display: block;
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
   box-shadow: 5px 5px #00008B;
+  position: relative;
   top: 0px;
+  transition: all ease 0.3s;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -388,10 +393,10 @@ img {
   font-size: 25px;
   font-family: 'Arial';
   margin-top: 30px;
+  margin-bottom: 100px;
   transition: all ease 0.3s;
   width: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 30%;
 } 
 
 #employerform-submit {
@@ -419,4 +424,12 @@ img {
   top: 40%;
   left: 40%;
   text-align: center;
+}
+
+#phoneNumber {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  padding-bottom: 20px;
 }

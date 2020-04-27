@@ -10,9 +10,11 @@ const Students = () => (
 		<a href="/" >#HireADragon</a>
 	</Typist>
 	</div>
+	<div id = "student-form-side">
 	<h1 id = "student-form-header" > Register to have your information sent to companies actively looking for interns!</h1>
 	<Studentform/>
 	<StudentResources/>	
+	</div>
 	<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
 	</>
 )
