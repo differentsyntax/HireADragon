@@ -9,20 +9,20 @@ h1 {
 }
 
 #header-left{
-  margin-top: 120px;
+  margin-top: 10%;
   color: maroon;
 }
 
 #header-right{
-  margin-top: 60px;
+  margin-top: 5%;
   color: green;
 }
 
 #student-form-header{
-  margin-top: 120px;
+  position: relative;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
   width: 50%;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
@@ -30,10 +30,9 @@ h1 {
 }
 
 #employer-form-header{
-  margin-top: 200px;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
   width: 50%;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
@@ -42,16 +41,14 @@ h1 {
 
 .textDragon { 
   font-family: Nunito Sans, sans-serif;
-  position: fixed; 
+  position: fixed;
   visibility: visible; 
-  top: 55px;
-  left: 10px;
+  top: 7%;
+  left: 1%;
   z-index: 200;
   font-size: 30px;
   font-weight: bold;
-  float: left;
-  margin: 0px 0px 0px 20px;
-  padding: 5px;
+  padding: 0.8%;
   border: 10px solid #00008B;
   background-color:orange;
   color: black;
@@ -62,25 +59,20 @@ h3, h4 {
 }
 
 #navButtons {
-  position: relative;
-  top: 50px;
+  display: flex;
+  position: fixed;
+  margin-top: 55px;
   z-index: 200;
   text-align: center;
-  padding: 5px;
-  position: fixed;
+  margin-left: 40%;
+  margin-right: 40%;
   width: 30%;
-  margin-left: 34%;
 }
 
 #navButtons button {
   background-color: rgba(5,4,2,0.2);
-  margin-right: 10px;
-  margin-bottom: 5px;
-  top: 0px;
-  width: 200px;
-  border: 1px solid black; 
-  padding-right: 5px;
-  padding-left: 5px;
+  width: 100%;
+  border: 1px solid black;
 }
 
 #navButtons button:hover {
@@ -94,7 +86,7 @@ h3, h4 {
 nav {
   z-index: 200;
   position: fixed;
-  top: 50px;
+  top: 15px;
   width: 100%;
   background-color: #B0B0B0;
   overflow: hidden;
@@ -102,8 +94,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 5px 5px 5px 5px;
+  margin-top: 40px;
   text-align: center;
   float: right;
   width: 25%;
@@ -112,21 +103,18 @@ nav ul {
 nav button {
   background-color: orange;
   border: 5px solid #00008B;
-  box-shadow: 5px 5px #00008B;
+  box-shadow: 3px 4px black;
   border-radius: 5px;
   position: relative;
-  top: 0px;
   transition: all ease 0.3s;
-  padding: 5px 5px 5px 5px;
-  width: 120px;
+  padding: 0.7%;
+  width: 20%;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 0.6%;
 }
 
 nav button:hover {
-  border: 5px solid black;
   box-shadow: 0 3px 0 black;
-  background-color: black;
   top: 3px;
 }
 
@@ -142,9 +130,8 @@ nav button:target {
 
 nav a {
   color: black;
-  padding: 5px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 110%;
   font-family: 'Arial';
 }
 
@@ -154,10 +141,8 @@ nav a:hover {
 
 .textBackground {
   background-color: rgba(5,4,2,0.3);
-  height: 100%;
   width: 75%;
   margin-left:auto;
-  padding: 15px;
 }
 
 a {
@@ -165,15 +150,23 @@ a {
   text-decoration: none;
 }
 
+#homepage-stuff{
+  display: flex;
+}
+
 #info-left {
-  display: inline-block;
-  float: left;
-  margin: 80px 0px 20px 120px;
-  padding-bottom: 10px;
-  width: 40%;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
   font-weight: 400;
+  flex: 1;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+a:hover {
+  color: white;
 }
 
 #info-left p {
@@ -184,14 +177,13 @@ a {
 }
 
 #info-right {
-  display: inline-block;
-  float: right;
-  margin: 80px 120px 10px 0;
-  padding-bottom: 10px;
-  width: 40%;
+  flex: 1;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
   font-weight: 400;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 6%;
 }
 
 #info-right p {
@@ -202,13 +194,12 @@ a {
 }
 
 #info-left button {
+  display: block;
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
   box-shadow: 5px 5px #00008B;
-  position: relative;
   top: 0px;
-  transition: all ease 0.3s;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -216,29 +207,30 @@ a {
   font-size: 25px;
   font-family: 'Arial';
   margin-top: 30px;
-  margin-bottom: 100px;
   transition: all ease 0.3s;
-}
-
-#info-left img {position: fixed;
-  bottom:0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
   width: 100%;
+  z-index: -1;
+}
+
+#home-img {
+  width: 100%;
+  margin-left: 0;
+  z-index: -1;
 }
 
 #info-right button {
+  display: block;
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
   box-shadow: 5px 5px #00008B;
-  position: relative;
   top: 0px;
-  transition: all ease 0.3s;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -246,8 +238,10 @@ img {
   font-size: 25px;
   font-family: 'Arial';
   margin-top: 30px;
-  margin-bottom: 100px;
   transition: all ease 0.3s;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #info-left button:active {
@@ -271,14 +265,15 @@ img {
 }
 
 #status {
-  text-align: center;
+  z-index: 200;
   position: fixed;
-  font-size: 15px;
-  top: 0px;
+  top: 0;
   width: 100%;
   background-color: #21ce99;
-  overflow: hidden; 
-  z-index: 200;
+  overflow: hidden;
+  text-align: center;
+  font-size: 13px;
+  padding: 0;
 }
 
 #status p {
@@ -290,59 +285,29 @@ img {
   color: white;
   font-size: 15px;
   font-weight: bold;
-  margin-right: 10px;
-  padding: 12px;
+  margin-right: 0.6%;
+  padding: 0.6%;
+}
+
+#student-stuff {
+  display: flex;
+  padding: 2%;
 }
 
 #student-form-side {
-  padding-top: 60px;
+  flex: 1;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-#student-fields {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+#student-resources-side {
+  flex: 1;
+  margin-right: 10%;
 }
 
-#student div {
-  border: rgba(5,4,2,0.3);
-  border-radius: 10px;
-}
-
-#student {
-  display: inline-block;
-  float: left;
-  margin: 50px 0px 20px 10px;
-  padding-bottom: 10px;
-  width: 60%;
-  font-family: Nunito Sans, sans-serif;
-  font-weight: 400;
-}
-
-#student a {
-  text-align: center;
-}
-
-#student p {
-  padding: 10px 10px 0 10px;
-  border: rgba(5,4,2,0.3);
-  border-radius: 10px;
-  text-align: left;
-}
-
-#resources h1 {
+#student-resources-side h1 {
   text-align: center;
   font-size: 40px;
-}
-
-#resources {
-  display: inline-block;
-  float: right;
-  margin: 0px 50px 10px 60px;
-  width: 30%;
-  text-align: left;
-  font-family: Nunito Sans, sans-serif;
-  font-weight: 400;
 }
 
 #resource-list {
@@ -367,25 +332,23 @@ img {
   margin-bottom: 20px;
 }
 
-#employer div {
-  border: rgba(5,4,2,0.3);
-  border-radius: 10px;
-}
-
-#employer-fields {
+#employers-form-side {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
 
+.MuiButton-label:hover {
+  color: white;
+}
+
 #studentform-submit {
+  display: block;
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
   box-shadow: 5px 5px #00008B;
-  position: relative;
   top: 0px;
-  transition: all ease 0.3s;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -393,10 +356,10 @@ img {
   font-size: 25px;
   font-family: 'Arial';
   margin-top: 30px;
-  margin-bottom: 100px;
   transition: all ease 0.3s;
   width: 40%;
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: auto;
 } 
 
 #employerform-submit {

@@ -6,7 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete'
 import countries from '../data/country'
 
 const Employerform = () => (
-	<div id = "employer">
+	<div>
 		<Formik
 			initialValues={{
 					firstName: '',
@@ -22,7 +22,7 @@ const Employerform = () => (
     >
       {({ isSubmitting }) => (
         <Form>
-					<div id = "employer-fields">
+					<div>
 						<div className = "employer-field">
 							<TextField fullWidth label = "First Name" margin = "normal" required variant = "outlined" type="name" name="firstName" />
 							<ErrorMessage name="firstName" color = "red" component="div" />
@@ -32,7 +32,7 @@ const Employerform = () => (
 							<ErrorMessage name="lastName" component="div" />
 						</div>
 						<div className = "employer-field">
-						<TextField fullWidth type = "email" margin = "normal" required label="Email" variant = "outlined" helperText="@drexel.edu only"/>
+						<TextField fullWidth type = "email" margin = "normal" required label="Email" variant = "outlined"/>
 						</div>
 {/* 						
 						<div>

@@ -10,7 +10,9 @@ const Employers = () => (
 	</Typist>
 	</div>
 	<h1 id = "employer-form-header" > If you are actively hiring interns/co-ops, please leave your contact information with us and we will send you info of potential candidates! </h1>
-	<Employerform/>
+	<div id = "employers-form-side">
+		<Employerform/>
+	</div>
 	<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
 	</>
 )

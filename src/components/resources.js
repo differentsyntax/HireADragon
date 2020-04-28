@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core'
 
 const StudentResources = () => (
 	<>
-		<div id = "resources">
+		<div>
 		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
 			<h1 id = "resources-header"> Some resources meanwhile: </h1>
 			<div id = "resource-list">

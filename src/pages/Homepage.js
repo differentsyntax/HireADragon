@@ -2,6 +2,7 @@ import React from 'react'
 import Typist from 'react-typist'
 import Anime, {anime} from 'react-anime'
 import { Link } from 'react-router-dom'
+import { Button } from '@material-ui/core'
 
 const Home = () => (
 	<>
@@ -10,7 +11,19 @@ const Home = () => (
 			<a href="/" >#HireADragon</a>
 		</Typist>
 	</div>
-
+	<div id = "navButtons">
+		<div>
+		<Button variant="text" color = "primary" type = "button">
+			<a href="https://drexel.edu/" target="_blank">Drexel University</a>
+		</Button>
+		</div>
+		<div>
+		<Button variant="text" color = "primary" type = "button">
+			<a href="https://drexel.edu/difference/co-op/how-co-op-works/" target="_blank">Co-op Program</a>
+		</Button>
+		</div>
+		</div>
+	<div id = "homepage-stuff">
 	<div id = "info-left">
 		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
 			<h1 id = "header-left"> Drexel student looking for a co-op or internship? </h1>
@@ -29,9 +42,7 @@ const Home = () => (
 				<Link to="/students">I'm in!</Link>
 			</button>
 			</Anime>
-			<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
 	</div>
-
 	<div id = "info-right">
 		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
 		<h1 id = "header-right"> Recruiter looking for the most skilled and competent interns there can be? </h1>
@@ -62,6 +73,10 @@ const Home = () => (
 			<Link to="/employers">Hire them!</Link>
 		</button>
 		</Anime>
+	</div>
+	</div>
+	<div id = "home-img">
+	<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
 	</div>
 	</>
 )

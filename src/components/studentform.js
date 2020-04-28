@@ -38,7 +38,7 @@ const Studentform = () => (
     >
       {({isSubmitting}) => (
         <Form>
-					<div id = "student-fields">
+					<div>
 						<div className = "student-field">
 							<Field fullWidth label = "First Name" margin = "normal" required variant = "outlined" type="name" name="firstName" as={TextField}/>
 							<ErrorMessage name="firstName" component="div" />
