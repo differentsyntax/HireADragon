@@ -12,17 +12,17 @@ const Home = () => (
 		</Typist>
 	</div>
 	<div id = "navButtons">
-		<div>
+		<div className = "top-button">
 		<Button variant="text" color = "primary" type = "button">
 			<a href="https://drexel.edu/" target="_blank">Drexel University</a>
 		</Button>
 		</div>
-		<div>
+		<div className = "top-button">
 		<Button variant="text" color = "primary" type = "button">
 			<a href="https://drexel.edu/difference/co-op/how-co-op-works/" target="_blank">Co-op Program</a>
-		</Button>
-		</div>
-		</div>
+		</Button>		
+	</div>
+	</div>
 	<div id = "homepage-stuff">
 	<div id = "info-left">
 		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
