@@ -14,6 +14,14 @@ const Employers = () => (
 		<Employerform/>
 	</div>
 	<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
+	<img id = "myimg" src={require("../assets/img/mridulawasthi.png")} alt = "Mridul Awasthi"/>
+	<div id="myinfo">
+	<a href="https://www.linkedin.com/in/mridulawasthi" target="_blank">
+			<button variant="contained" style={{color: 'white', borderRadius: 35, backgroundColor: "blue", padding: "10px 10px", fontSize: "18px"
+		}} type = "button">LinkedIn
+			</button>
+			</a>
+		</div>
 	</>
 )
 

@@ -4,6 +4,10 @@ import * as yup from 'yup'
 import { TextField, Button, MenuItem } from '@material-ui/core'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import countries from '../data/country'
+import majors from '../data/majors'
+import swal from 'sweetalert';
+
+const formURL = "https://q4c0oh5zd6.execute-api.us-east-1.amazonaws.com/Prod/submitForm"
 
 const Studentform = () => (
 	<div id = "student">
@@ -17,6 +21,7 @@ const Studentform = () => (
 					state: '',
 					country: '',
 					resume: '',
+					major: '',
 					school: 'Drexel University',
 					linkedin: '',
 					github: '',
@@ -26,15 +31,30 @@ const Studentform = () => (
 			}}
 			validationSchema={validationSchema}
 			onSubmit={(data, {setSubmitting, resetForm }) => {
-					resetForm();
+					
 					setSubmitting(true)
 					// make async call
 					// alert(JSON.stringify(data, null, 2));
-					
+					var xhr = new XMLHttpRequest()
+					xhr.open('post', formURL, true)
+					xhr.setRequestHeader('Accept', 'application/json; charset=utf-8')
+					xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+					xhr.send(JSON.stringify(data))
+
+					xhr.onloadend = response => {
+						if (response.target.status === 200) {
+							resetForm();
+							swal("Your info is in! We'll reach out to you soon!")
+						} else {
+							swal("There was some error! Please try again!")
+							console.error(JSON.parse(response));
+						}
+					}
+
 					setSubmitting(false)
         }}
     >
-      {({isSubmitting, errors, touched}) => (
+      {({isSubmitting, errors, touched, setFieldValue}) => (
         <Form>
 					<div>
 						<div className = "student-field">
@@ -84,12 +104,37 @@ const Studentform = () => (
 						</div>
 						</div>
 						<div className = "student-field">
-						<p>Resume *</p>
-						<Field fullWidth type = "file" margin = "normal" required InputProps={{readOnly: true}} variant = "outlined" name="resume" as={TextField}/>
+						<p>Resume Link (please upload your resume to your online storage, set share permissions and paste link here)*</p>
+						<Field fullWidth type = "link" margin = "normal" required variant = "outlined" name="resume" as={TextField}/>
 						<div className = "errors">
 						<ErrorMessage name="resume"  />
 						</div>
 						</div>
+						{/* <div className = "student-field">
+						<Field fullWidth type = "text" label="Major" margin = "normal" variant="outlined" name="major" as={TextField}/>
+						<div className = "errors">
+						<ErrorMessage name="major"  />
+						</div>
+						</div> */}
+
+
+						<div class = "student-field">
+						<p>Major* </p>
+						<Field select variant = "outlined" defaultValue = "" name="major" as={TextField}>
+							{majors.map((option) => (
+								<MenuItem fullWidth key={option.name} value={option.name}>
+									{option.name}
+								</MenuItem>
+							))}
+						</Field>
+						<div className = "errors">
+						<ErrorMessage name="major"  />
+						</div>
+						</div>
+
+
+
+
 						<div className = "student-field">
 						<Field fullWidth value = "Drexel University" type = "text" label="School" margin = "normal" InputProps={{readOnly: true}} variant="filled" name="school" as={TextField}/>
 						<div className = "errors">
@@ -188,6 +233,14 @@ const validationSchema = yup.object().shape(
 	
 		country: yup
 		.string('*should be a valid country')
+		.required('*required field')
+	,
+		resume: yup
+		.string('*should be a valid link')
+		.required('*required field')
+	,
+		major: yup
+		.string('should be a valid major')
 		.required('*required field')
 	}
 )

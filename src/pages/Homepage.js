@@ -42,8 +42,10 @@ const Home = () => (
 				<Link to="/students">I'm in!</Link>
 			</button>
 			</Anime>
+			
 	</div>
 	<div id = "info-right">
+		
 		<Anime opacity={[0, 1]} translateY={'1em'} delay={(e, i) => i * 750}>
 		<h1 id = "header-right"> Recruiter looking for the most skilled and competent interns there can be? </h1>
 		<p> 
@@ -78,6 +80,14 @@ const Home = () => (
 	<div id = "home-img">
 	<img src={require('../assets/img/philadelphia.png')} alt = "Philly Skyline"/>
 	</div>
+	<img id = "myimg" src={require("../assets/img/mridulawasthi.png")} alt = "Mridul Awasthi"/>
+	<div id="myinfo">
+	<a href="https://www.linkedin.com/in/mridulawasthi" target="_blank">
+			<button variant="contained" style={{color: 'white', borderRadius: 35, backgroundColor: "blue", padding: "10px 10px", fontSize: "18px"
+		}} type = "button">LinkedIn
+			</button>
+			</a>
+		</div>
 	</>
 )
 

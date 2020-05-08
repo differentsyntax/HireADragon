@@ -4,7 +4,9 @@ import * as yup from 'yup'
 import { TextField, Button } from '@material-ui/core'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import countries from '../data/country'
+import swal from 'sweetalert';
 
+const formURL = "https://tjrcwgmaw2.execute-api.us-east-1.amazonaws.com/Prod/submitForm"
 const Employerform = () => (
 	<div>
 		<Formik
@@ -20,11 +22,26 @@ const Employerform = () => (
 		}}
 		validationSchema={validationSchema}
 		onSubmit={(data, {setSubmitting, resetForm }) => {
-				resetForm();
+				
 				setSubmitting(true)
 				// make async call
-			  alert(JSON.stringify(data, null, 2));
-				
+			  //alert(JSON.stringify(data, null, 2));
+				var xhr = new XMLHttpRequest()
+				xhr.open('post', formURL, true)
+				xhr.setRequestHeader('Accept', 'application/json; charset=utf-8')
+				xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+				xhr.send(JSON.stringify(data))
+
+				xhr.onloadend = response => {
+					if (response.target.status === 200) {
+						resetForm();
+						swal("Your info is in! We'll reach out to you soon!")
+					} else {
+						swal("There was some error! Please try again!")
+						console.error(JSON.parse(response));
+					}
+				}
+
 				setSubmitting(false)
 			}}
 	>
@@ -116,13 +133,11 @@ const validationSchema = yup.object().shape(
 	
 		position: yup
 		.string()
-		.email('*not a valid email')
 		.required('*required field')
 	,
 	
 		company: yup
 		.string()
-		.email('*not a valid email')
 		.required('*required field')
 	,
 		city: yup

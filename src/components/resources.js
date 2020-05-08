@@ -13,7 +13,7 @@ const StudentResources = () => (
 				<tr>
 					<th>
 					<Button variant="contained" style={{borderRadius: 35, backgroundColor: "#21ce99", padding: "10px 10px", fontSize: "18px"
-    }} color = "Blue" type = "button">
+    }} color = "primary" type = "button">
 						<a href="https://www.simplify.jobs" target="_blank" >Simplify</a>
 					</Button>
 					</th>
