@@ -5,31 +5,14 @@ A website designed using **React**, specifically for Drexel University students 
 
 The main purpose is to connect the students looking for a summer internship with companies and start-ups in Greater Philadelphia Area and other parts of the country.  
 
-## Setting up the environment:
+## Setup
 
-Create the Root Folder:
+Clone the repository and install dependencies by using the following command from the cloned directory:
 
 ```bash
-mkdir reactApp
-cd reactApp
+npm install
 ```
-Install **React**:
-```bash
-npm install react --save
-```
-Install the *react-dom* package:
-```bash
-npm install react-dom --save
-```
-Install *create-react-app*:
-```bash
-npm install create-react-app
-```
-Create your app:
-```bash
-npx create-react-app my-app
-```
-Run the server to run the webpage on local host:
+To run the website locally:
 ```bash
 npm start
 ```
@@ -37,3 +20,5 @@ To use the header typing animation (follow the documentation at: https://www.npm
 ```bash
 npm install react-typist
 ```
+### Feel free to fork the project and build a version for your own university or college
+### Sharing the link and the cause on LinkedIn helped boost the traffic on the website
