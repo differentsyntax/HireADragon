@@ -20,5 +20,5 @@ To use the header typing animation (follow the documentation at: https://www.npm
 ```bash
 npm install react-typist
 ```
-### Feel free to fork the project and build a version for your own university or college
-### Sharing the link and the cause on LinkedIn helped boost the traffic on the website
+##### Feel free to fork the project and build a version for your own university or college
+##### Sharing the link and the cause on LinkedIn helped boost the traffic on the website
