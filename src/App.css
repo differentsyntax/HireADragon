@@ -227,12 +227,16 @@ a:hover {
   text-decoration: none;
   font-size: 100%;
   font-family: Nunito Sans, sans-serif;
-  margin-top: 10px;
+  margin-top: 5%;
   transition: all ease 0.3s;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 12%;
+}
+
+#info-left button:hover {
+  margin-top: 1%;
 }
 
 img {
@@ -259,20 +263,20 @@ img {
   text-decoration: none;
   font-size: 100%;
   font-family: Nunito Sans, sans-serif;
-  margin-top: 10px;
+  margin-top: 5%;
   transition: all ease 0.3s;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 12%;
 }
 
 #info-left button:hover {
-  margin-top: 3%; 
+  margin-top: 2%; 
 }
 
 #info-right button:hover {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 #status {
