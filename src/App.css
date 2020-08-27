@@ -1,6 +1,6 @@
 body {
-  font-family: Nunito Sans;
-  font-size: 18px;
+  font-family: Nunito Sans, sans-serif;
+  font-size: 100%;
   background-color: white;
 }
 
@@ -9,128 +9,108 @@ h1 {
 }
 
 #header-left{
-  margin-top: 95px;
-  color: maroon;
+  color: black;
+  font-size: 130%;
 }
 
 #header-right{
-  margin-top: 60px;
-  color: green;
+  color: black;
+  font-size: 125%;
 }
 
-#student-form-header{
+#student-form-header {
   position: relative;
-  margin-top: 10%;
+  margin-top: 12%;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 100%;
 }
 
 #employer-form-header{
-  margin-top: 10%;
+  position: relative;
+  margin-top: 12%;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
+  max-width: 700px;
   text-align: center;
   font-family: Nunito Sans, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 100%;
 }
 
 .textDragon { 
-  font-family: Nunito Sans, sans-serif;
   position: fixed;
-  visibility: visible; 
-  top: 7%;
-  left: 1%;
-  z-index: 200;
-  font-size: 30px;
-  font-weight: bold;
-  padding: 0.8%;
-  border: 10px solid #00008B;
-  background-color:orange;
+  top: 1.5%;
+  font-family: Nunito Sans, sans-serif;
+  z-index: 100;
+  /* border: 10px solid #00008B; */
+  color: transparent;
+  margin-left: 7%;
+}
+
+.textDragon a {
   color: black;
+  padding: 4%;
+  border: 3px solid black;
+  background-color: orange;
+  font-size: 180%;
+  font-weight: bold;
+}
+
+.textDragon a:hover {
+  color: white;
 }
 
 h3, h4 {
   margin-bottom: 0;
 }
 
-#navButtons {
-  display: flex;
-  position: fixed;
-  margin-top: 55px;
-  z-index: 200;
-  text-align: center;
-  justify-content: space-between;
-  margin-left: 40%;
-  width: 19.5%;
-}
-
-#navButtons .top-button {
-  flex:1;
-  border: 1px solid black;
-  margin-right: 1%;
-  margin-left: 1%;
-  background-color: rgba(5,4,2,0.2);
-
-}
-
-#navButtons .top-button:hover {
-  color: white;
-  background-color: black;
-}
-
-#navButtons a:hover {
-  background-color: black;
-}
-
 nav {
-  z-index: 200;
+  z-index: 100;
   position: fixed;
-  top: 15px;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  background-color:orange;
   width: 100%;
-  background-color: #B0B0B0;
   overflow: hidden;
+  font-size: 80%;
 }
 
 nav ul {
   list-style-type: none;
-  margin-top: 40px;
   text-align: center;
-  float: right;
-  width: 30%;
-  padding-top: 0.4%;
+  width: 60%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 nav button {
   background-color: orange;
-  border: 1px solid #00008B;
-  border-radius: 5px;
-  box-shadow: 5px 5px #00008B;
-  top: 0px;
-  color: black;
+  border: none;
+  /* border-radius: 5px; */
+  /* box-shadow: 5px 5px #1F2815; */
   text-align: center;
   text-decoration: none;
-  font-size: 100%;
-  font-family: 'Arial';
   transition: all ease 0.3s;
   width: 20%;
-  margin-left: 0.8%;
-  margin-right: auto;
+  font-size: 100%;
+  font-weight: bold;
 }
 
 nav button:hover {
-  box-shadow: 0 3px 0 black;
+  /* box-shadow: 0 3px 0 #5A4952; */
   top: 3px;
 }
 
 nav button:target {
-  box-shadow: 0 0 0;
-  background-color: black;
-  border: 1px solid black;
   border-radius: 5px;
   position: relative;
   top: 0px;
@@ -138,9 +118,8 @@ nav button:target {
 }
 
 nav a {
-  color: black;
-  text-decoration: none;
-  font-family: 'Arial';
+  color: #5A4952;
+  font-family: Nunito Sans, sans-serif;
   width: 100%;
 }
 
@@ -155,13 +134,46 @@ nav a:hover {
 }
 
 a {
-  color: black;
+  color: #5A4952;
   text-decoration: none;
+  font-family: Nunito Sans, sans-serif;
+  font-weight: bold;
   font-size: 100%;
 }
 
+a:hover {
+  color: white;
+}
+
 #homepage-stuff{
+  position: relative;
   display: flex;
+  justify-content: center;
+  margin-bottom: 7%;
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+}
+
+#student-stuff {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7%;
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+  margin-top: 0;
+}
+
+#employer-stuff {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7%;
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
 }
 
 #info-left {
@@ -171,19 +183,16 @@ a {
   flex: 1;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-
-a:hover {
-  color: white;
+  margin: auto;
+  margin-top: 10%;
 }
 
 #info-left p {
-  background-color:rgba(0, 0, 0, 0.2);
+  background-color: lightgray;
   padding: 10px;
   border: rgba(5,4,2,0.3);
   border-radius: 10px;
+  font-size: 75%;
 }
 
 #info-right {
@@ -193,14 +202,17 @@ a:hover {
   font-weight: 400;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 6%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #info-right p {
-  background-color:rgba(0, 0, 0, 0.2);
+  background-color: lightgray;
   padding: 10px;
   border: rgba(5,4,2,0.3);
   border-radius: 10px;
+  font-size: 75%;
 }
 
 #info-left button {
@@ -208,19 +220,19 @@ a:hover {
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
-  box-shadow: 5px 5px #00008B;
   top: 0px;
-  color: black;
+  color: white;
   text-align: center;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  font-size: 25px;
-  font-family: 'Arial';
-  margin-top: 30px;
+  font-size: 100%;
+  font-family: Nunito Sans, sans-serif;
+  margin-top: 10px;
   transition: all ease 0.3s;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 img {
@@ -229,8 +241,9 @@ img {
 }
 
 #home-img {
+  position: fixed;
+  bottom: 0%;
   width: 100%;
-  margin-left: 0;
   z-index: -1;
 }
 
@@ -239,39 +252,27 @@ img {
   background-color: orange;
   border: 1px solid #00008B;
   border-radius: 5px;
-  box-shadow: 5px 5px #00008B;
   top: 0px;
-  color: black;
+  color: #5A4952;
   text-align: center;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  font-size: 25px;
-  font-family: 'Arial';
-  margin-top: 30px;
+  font-size: 100%;
+  font-family: Nunito Sans, sans-serif;
+  margin-top: 10px;
   transition: all ease 0.3s;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
-#info-left button:active {
-  box-shadow: 0 3px 0 black;
-  background-color: black;
-  top: 3px;
+#info-left button:hover {
+  margin-top: 3%; 
 }
 
-#info-right button:active {
-  box-shadow: 0 3px 0 black;
-  background-color: black;
-  top: 3px;
-}
-
-#info-left a:hover {
-  color: white;
-}
-
-#info-right a:hover {
-  color: white;
+#info-right button:hover {
+  margin-top: 3%;
 }
 
 #status {
@@ -291,7 +292,7 @@ img {
 }
 
 #note {
-  background-color: black;
+  background-color: #5A4952;
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -313,17 +314,20 @@ img {
 #student-resources-side {
   flex: 1;
   margin-right: 10%;
+  font-size: 70%;
 }
 
 #student-resources-side h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 120%;
+  font-weight: 400;
+  color: #5A4952;
 }
 
 #resource-list {
   background-color:rgba(0, 0, 0, 0.1);
   text-align: left;
-  padding: 10px;
+  padding: 3%;
   border: rgba(5,4,2,0.3);
   border-radius: 20px;
 }
@@ -342,7 +346,12 @@ img {
   margin-bottom: 20px;
 }
 
+#resource-list button a {
+  font-size: 50%;
+}
+
 #employers-form-side {
+  font-size: 70%;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -355,16 +364,14 @@ img {
 #studentform-submit {
   display: block;
   background-color: orange;
-  border: 1px solid #00008B;
   border-radius: 5px;
-  box-shadow: 5px 5px #00008B;
   top: 0px;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  font-size: 25px;
-  font-family: 'Arial';
+  font-size: 100%;
+  font-family: Nunito Sans, sans-serif;
   margin-top: 30px;
   transition: all ease 0.3s;
   width: 40%;
@@ -372,25 +379,35 @@ img {
   margin-right: auto;
 } 
 
+#studentform-submit:hover {
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 #employerform-submit {
   display: block;
   background-color: orange;
-  border: 1px solid #00008B;
   border-radius: 5px;
-  box-shadow: 5px 5px #00008B;
   top: 0px;
   color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  font-size: 25px;
-  font-family: 'Arial';
+  font-size: 100%;
+  font-family: Nunito Sans, sans-serif;
   margin-top: 30px;
   transition: all ease 0.3s;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
 } 
+
+#employerform-submit:hover {
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
 
 #notfound {
   position: absolute;
@@ -427,9 +444,39 @@ img {
 }
 
 #myinfo:hover {
-  color: black;
+  color: #5A4952;
 }
 
 #mui-component-select-major{
   width: 200px;
+}
+
+.student-field {
+  font-size: 75%;
+  width: 100%;
+}
+
+.student-field label {
+  font-size: 100%;
+}
+
+.student-field input {
+  font-size: 75%;
+}
+
+.employer-field {
+  font-size: 75%;
+  width: 100%;
+}
+
+.employer-field label {
+  font-size: 120%;
+}
+
+.employer-field p {
+  font-size: 120%;
+}
+
+.employer-field input {
+  font-size: 75%;
 }

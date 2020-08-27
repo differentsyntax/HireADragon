@@ -23,7 +23,7 @@ const StudentResources = () => (
 				</tr>
 				<tr>
 					<th>
-					<Button variant="contained" style={{borderRadius: 35, backgroundColor: "blue", padding: "10px 10px", fontSize: "18px"
+					<Button variant="contained" style={{borderRadius: 35, backgroundColor: "cyan", padding: "10px 10px", fontSize: "18px"
     }} color = "primary" type = "button">
 						<a href="https://bit.ly/candor2" target="_blank">Candor</a>
 					</Button>
